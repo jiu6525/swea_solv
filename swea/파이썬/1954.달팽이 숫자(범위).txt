@@ -1,0 +1,36 @@
+t = int(input())
+for i0 in range(1,t+1):
+    n = int(input())
+    l = [[0]*n for i in range(n)]
+    # l=[[0,0,0],[0,0,0],[0,0,0]]
+    cnt = 1
+    dx=dy=d=0
+    while 1:
+        di = [0, 1, 0, -1]
+        dj = [1, 0, -1, 0]
+        ni = dx + di[d]
+        nj = dy + dj[d]
+
+        l[dx][dy] += cnt
+        cnt += 1
+        if cnt > n*n:
+            break
+        else:
+            if 0 <= ni < n and 0 <= nj < n and l[ni][nj] == 0:
+                dx += di[d]
+                dy += dj[d]
+            else:
+                d += 1
+                d = d % 4
+                dx += di[d]
+                dy += dj[d]
+    print(f'#{i0}')
+    for i in l:
+        print(f'{" ".join(map(str,i))}')
+
+
+1954 swea. 달팽이 숫자
+
+범위구하는게 상당히 어려웠다
+혼자서는 풀수 있지만 다음에 다시한번 풀어보자
+증감,범위와 변수지정에 대하여 생각을 해야한다.
