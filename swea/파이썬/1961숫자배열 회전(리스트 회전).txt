@@ -1,0 +1,25 @@
+def ct(arr):
+    l_0 = [[0]*n for i in range(n)]
+    for i in range(n):
+        for j in range(n):
+            l_0[i][j] = arr[n-1-j][i]
+    return l_0
+
+
+N = int(input())
+for i in range(N):
+    n = int(input())
+    l = [list(map(int,input().split())) for i0 in range(n)]
+    l1 = ct(l)
+    l2 = ct(l1)
+    l3 = ct(l2)
+    print(f"#{i+1}")
+    for a,b,c in zip(l1,l2,l3):
+        print("{0} {1} {2}".format("".join(map(str,a)),"".join(map(str,b)),"".join(map(str,c))))
+
+#swea 1961.숫자배열 회전
+
+이차원 리스트를 90도,180도,270도 회전한것을 출력하는 문제인데
+초기 입력받은 리스트에 대하여 좌표로 표시하여 90도 돌렸을때 좌표의 변화에대한 규칙성을 찾고
+함수로 구현하면 쉽게 풀이할수 있다
+출력할경우 zip메소드로 묶은 결과같을 한줄에 하나씩 출력해야 한다
