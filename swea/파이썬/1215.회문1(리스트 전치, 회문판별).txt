@@ -1,0 +1,25 @@
+def solve(arr):
+    result = 0
+    for lst in arr:
+        for i in range(8-n+1):
+            ans = True
+            l = lst[i:n+i]
+            for j in range(len(l)//2):
+                if l[j] != l[-1-j]:
+                    ans = False
+                    break
+            if ans:
+                result += 1
+
+    return result
+
+for i in range(10):
+    n = int(input())
+    a = [list(input()) for j in range(8)]
+    b = list(map(list,zip(*a)))
+    result = solve(a) + solve(b)
+    print(f'#{i+1} {result}')
+
+#swea 1215.회문1
+2차원 배열로 입력받은후 a와 그의 전치인 b를 함수를 구현하여 회문을 찾았다
+회문의 범위지정을 통하여 풀면된다.
