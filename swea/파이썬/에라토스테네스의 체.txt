@@ -1,0 +1,14 @@
+# 에라토스테네스의 체
+ def prime(n):
+     l = [True] * n
+     m = int(n ** 0.5)
+     for i in range(2, m + 1):
+         if l[i]:
+             for j in range(i + i, n, i):
+                 l[j] = False
+
+     return [i for i in range(n) if l[i] and i > 1]
+
+
+ n = 1000000
+ print(" ".join(map(str, prime(n))))
