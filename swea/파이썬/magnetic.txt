@@ -1,0 +1,15 @@
+# magnetic
+for i0 in range(1,11):
+    n = int(input())
+    l = [list(map(int,input().split())) for i in range(n)]
+    l1 = list(map(list,zip(*l)))
+
+    result = 0
+    for lst in l1:
+        p = 0
+        for i in lst:
+            if i:
+                if i == 2 and p == 1:
+                    result +=1
+                p = i
+    print(f'#{i0} {result}')
