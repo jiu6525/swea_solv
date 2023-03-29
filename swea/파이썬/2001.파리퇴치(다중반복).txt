@@ -1,0 +1,22 @@
+T = int(input())
+for i0 in range(1,T+1):
+    n,m = map(int,input().split())
+    result = 0
+    l = [list(map(int,input().split())) for i in range(n)]
+    for si in range(n-m+1):
+        for sj in range(n-m+1):
+            cnt = 0
+            for i in range(si,si+m):
+                for j in range(sj,sj+m):
+                    cnt += l[i][j]
+            if cnt > result:
+                result = cnt
+
+    print("#{0} {1}".format(i0,result))
+
+
+#swea 2001.파리퇴치
+
+처음 반복문 2개 -> 전체 영역에서 조사해야하는 영역의 범위
+나머지 2개 -> 구해야하는 영역의 sum값
+반복문을 4개나 써야하기 때문에 이해하기가 난해하다 범위지정과 반복문의 설정등 다시한번 풀어보자
