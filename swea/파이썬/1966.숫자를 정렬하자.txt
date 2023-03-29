@@ -1,0 +1,6 @@
+a = int(input())
+for i in range(1,a+1):
+    x = int(input())
+    n = list(map(int,input().split()))
+    n.sort()
+    print("#{} {}".format(i,(" ".join(map(str,n)))))
