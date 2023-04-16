@@ -1,0 +1,13 @@
+m = 1000000
+n = int(m**0.5)
+
+def ck(m,n):
+    l = [True]*(m+1)
+
+    for i in range(2,n+1):
+        for j in range(i+i,m+1,i):
+            if l[j]:
+                l[j] = False
+    return [i for i in range(len(l)) if l[i] and i>1]
+
+print(" ".join(map(str,ck(m,n))))
