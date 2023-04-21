@@ -1,0 +1,20 @@
+def ck(l):
+    c,cs =0,0
+    for i in range(n):
+        r = sum(l[i][0:n])
+        if r>c:
+            c = r
+        for j in range(n):
+            if i == j:
+                cs += l[i][j]
+    return max(c,cs)
+
+for i0 in range(1,11):
+    a = int(input())
+    n = 100
+    l = [list(map(int,input().split())) for i in range(n)]
+    l1 = list(map(list,zip(*l)))
+
+    print("#{} {}".format(i0,max(ck(l),ck(l1))))
+
+
