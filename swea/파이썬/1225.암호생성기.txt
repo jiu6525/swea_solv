@@ -1,0 +1,15 @@
+def cl(a):
+    while 1:
+        for i in range(1,6):
+            n = a.pop(0)-i
+            if n >0:
+                a.append(n)
+            else:
+                n = 0
+                a.append(n)
+                return a
+
+for i0 in range(1,11):
+    n = int(input())
+    a = list(map(int,input().split()))
+    print("#{} {}".format(i0," ".join(map(str,cl(a)))))
