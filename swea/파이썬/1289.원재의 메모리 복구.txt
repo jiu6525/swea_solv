@@ -1,0 +1,12 @@
+t = int(input())
+for i0 in range(1,t+1):
+    a = list(input())
+    n = '0'
+    c = 0
+
+    for i in a:
+        if i != n:
+            c += 1
+            n = i
+
+    print("#{} {}".format(i0,c))
