@@ -1,0 +1,4 @@
+t = int(input())
+for i0 in range(1,t+1):
+    n,m = map(int,input().split())
+    print("#{} {} {}".format(i0,2*m-n,n-m))
