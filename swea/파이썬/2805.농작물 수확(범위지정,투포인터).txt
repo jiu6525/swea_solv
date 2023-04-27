@@ -38,3 +38,20 @@ for i0 in range(1,t+1):
     print(f'#{i0} {result}')
 
 
+아래는 새로운 범위지정 풀이
+t = int(input())
+for i0 in range(1,t+1):
+    n = int(input())
+    r = 0
+    a = n//2
+    l = [list(map(int, list(input()))) for i in range(n)]
+
+    for i in range(a+1):
+        r += sum(l[i][a-i:a+i+1])
+
+
+    for i in range(a+1,n):
+        r += sum(l[i][a-(n-i-1):a+(n-i)])
+
+    print("#{} {}".format(i0,r))
+
