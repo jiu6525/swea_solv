@@ -1,0 +1,3 @@
+t = int(input())
+for i0 in range(1,t+1):
+    print("#{} {}".format(i0,sum(list(map(int,input().split())))))
