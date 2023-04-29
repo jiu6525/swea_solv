@@ -1,0 +1,8 @@
+t = int(input())
+for i0 in range(1,t+1):
+    l = list(map(int,input().split()))
+    for i in range(len(l)):
+        if l[i] <40:
+            l[i] = 40
+
+    print("#{} {}".format(i0,sum(l)//len(l)))
