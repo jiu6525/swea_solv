@@ -1,0 +1,6 @@
+t = int(input())
+for i in range(1,t+1):
+    a,b = map(int,input().split())
+    a = a**2
+    b = b**2
+    print("#{} {}".format(i,a//b))
