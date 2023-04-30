@@ -1,0 +1,12 @@
+t = int(input())
+for i0 in range(1,t+1):
+    n = int(input())
+    l = list(map(str,input().split()))
+    n1 = n//2 if n%2==0 else (n//2)+1
+    a = l[:n1] 
+    b = l[n1:]
+    b += ' '
+    r = ''
+    for i in range(n1):
+        r += a[i] + ' ' + b[i] +' '
+    print("#{} {}".format(i0,r))
