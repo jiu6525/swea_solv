@@ -1,0 +1,16 @@
+t = int(input())
+for i0 in range(1,t+1):
+    n,m = input().split()
+    r = ["ZRO","ONE","TWO","THR","FOR","FIV","SIX","SVN","EGT","NIN"]
+    result = []
+    l = list(input().split())
+
+    for i in l:
+        result.append(r.index(i))
+
+    result.sort()
+
+    print(f"#{i0}")
+    for i in result:
+        print(r[i], end=" ")
+
