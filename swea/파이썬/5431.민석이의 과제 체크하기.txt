@@ -1,0 +1,8 @@
+t = int(input())
+for i0 in range(1,t+1):
+    a,b = map(int,input().split())
+    n = list(map(int,input().split()))
+    l = [i for i in range(1,a+1)]
+    for i in n:
+        l.remove(i)
+    print("#{} {}".format(i0," ".join(map(str,l))))
