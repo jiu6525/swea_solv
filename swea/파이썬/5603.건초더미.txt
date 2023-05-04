@@ -1,0 +1,9 @@
+t = int(input())
+for i0 in range(1,t+1):
+    n = int(input())
+    l = []
+    for i in range(n):
+        l.append(int(input()))
+    avg = sum(l)//len(l)
+    l = [i-avg for i in l if i>avg]
+    print("#{} {}".format(i0,sum(l)))
