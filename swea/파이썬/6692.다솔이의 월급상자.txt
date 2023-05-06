@@ -1,0 +1,9 @@
+t = int(input())
+for i0 in range(1,t+1):
+    r = 0
+    n = int(input())
+    for i in range(n):
+        a,b=map(float,input().split())
+        r += a*b
+    r = '%.6f'%r
+    print("#{} {}".format(i0,r))
