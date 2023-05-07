@@ -1,0 +1,27 @@
+n = int(input())
+for i0 in range(1,n+1):
+    w = input()
+    lw = len(w)
+
+    l = [['.'] * (lw*4+1) for i in range(5)]
+
+    idx = 0
+
+    for i in range(lw*4+1):
+        if i%4 ==0:
+            l[2][i] = '#'
+        
+        elif i%4 == 1 or i%4 ==3:
+            l[1][i] = "#"
+            l[3][i] = "#"
+        
+        else:
+            l[0][i] = "#"
+            l[4][i] = "#"
+            l[2][i] = w[idx]
+            idx+=1
+
+    for i in l:
+        for j in i:
+            print(j, end="")
+        print()
