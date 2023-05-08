@@ -1,0 +1,39 @@
+t = int(input())
+for i0 in range(1,t+1):
+    n,m = map(int,input().split())
+    result = 0
+    for i1 in range(n):
+        l = input()
+        a = ['0001101','0011001','0010011','0111101','0100011','0110001','0101111','0111011','0110111','0001011']
+        b = [] 
+        if '1' in l:
+            for i in a:
+                if i in l:
+                    b.append(l.index(i))
+            b1 = min(b)
+            
+            while 1:
+                r = []
+                b = l[b1:]
+                for i in range(0,len(b)):
+                    if '1' in b[7*i:7*(i+1)]:
+                        for j in a:
+                            if j == b[7*i:7*(i+1)]:
+                                r.append(a.index(j))
+                if len(r)<=1:
+                    b1 += 1
+                else:
+                    break
+            
+            for i in range(len(r)):
+                if i%2 ==0:
+                    result += r[i]*3
+                else:
+                    result += r[i]
+                    
+    if result %10==0:
+        print("#{} {}".format(i0,sum(r)))
+
+    else:
+        print("#{} {}".format(i0,0))
+                
