@@ -1,0 +1,46 @@
+//배열사용 풀이 - 문제 n 의 최대값이 30이므로 30크기의 배열생성
+t = int(input())
+for i0 in range(1,t+1):
+    l = [0] *30
+    n,m = map(int,input().split())
+    for i in range(29,-1,-1):
+        if m - (2**i) >=0:
+            l[i] += 1
+            m -= 2**i
+
+    def ck(l):
+        for i in range(n):
+            if l[i] != 1:
+                return "OFF"
+        return "ON"
+
+    print("#{} {}".format(i0,ck(l)))
+
+//조건사용 풀이 - n만큼의 반복을 했을때 m이 2로 나눠진다면 false 이후 m//2
+def check():
+    global N, M
+    for i in range(N):
+        if M % 2 ==0:
+            return False
+        M //= 2
+    else:
+        return True
+ 
+T = int(input())
+for tc in range(T):
+    N, M = map(int, input().split())
+    res = 'ON' if check() else 'OFF'
+    print('#{} {}'.format(tc+1, res))
+
+
+//비트연산사용 풀이 
+t = int(input())
+def check(n):
+    for i in range(n):
+        if not m & (1 << i):
+            return 'OFF'
+    return 'ON'
+ 
+for tc in range(1, t+1):
+    n, m = map(int, input().split())
+    print(f'#{tc}', check(n))
