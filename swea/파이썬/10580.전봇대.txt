@@ -1,0 +1,14 @@
+t = int(input())    
+for i0 in range(1,t+1):
+    n = int(input())
+    l = [list(map(int,input().split())) for i in range(n)]
+    c = 0
+    for i in range(len(l)):
+        for j in range(i+1,len(l)):
+            a,b = l[i][0],l[i][1]
+            x,y = l[j][0],l[j][1]
+            if (x<a and y>b) or (x>a and y<b):
+                    c += 1
+            
+    print("#{} {}".format(i0,c))
+          
