@@ -1,0 +1,20 @@
+def dfs(v,sm):
+    global ans
+    if v == n:
+        if sm==m:
+            ans += 1
+        return
+
+    #원소를 선택했을때
+    dfs(v+1,sm+l[v])
+    #원소를 선택하지 않았을때
+    dfs(v+1,sm)
+
+t = int(input())
+for i0 in range(1,t+1):
+    n,m = map(int,input().split())
+    l=list(map(int,input().split()))
+    ans = 0
+    dfs(0,0)
+
+    print("#{} {}".format(i0,ans))
