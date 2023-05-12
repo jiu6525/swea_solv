@@ -1,0 +1,18 @@
+#진기의 붕어빵
+#단위시간당 붕어빵의 개수와 방문자의 수를 비교하여 판단
+#(t//m)*k =단위시간 t초마다 만들수 있는 양
+def ck(l):
+        cnt = 0
+        for t in l:
+            cnt += 1
+            if (t//m)*k < cnt:
+                return "Impossible"
+        return "Possible"
+t = int(input())
+for i0 in range(1,t+1):
+    n,m,k = map(int,input().split())
+    l = list(map(int,input().split()))
+    l.sort()
+
+    
+    print("#{} {}".format(i0,ck(l)))
