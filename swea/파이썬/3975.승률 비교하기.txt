@@ -1,0 +1,9 @@
+t = int(input())
+r = []
+for i0 in range(1,t+1):
+    a,b,c,d = map(int,input().split())
+    result = "ALICE" if a/b>c/d else ("BOB" if a/b<c/d else "DRAW")
+    r.append(result)
+
+for i0 in range(1,t+1):
+    print("#{} {}".format(i0,r[i0-1]))
