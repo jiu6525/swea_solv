@@ -1,0 +1,29 @@
+t = int(input())
+for i0 in range(1,t+1):
+    n,a,b = map(int,input().split())
+    ans = float("inf")
+    print(ans)
+    for r in range(1,n+1):
+        for c in range(1,n+1):
+            if r*c<= n:
+                ans = min(ans,a*abs(r-c)+b*(n-r*c))
+            else:
+                break
+    print("#{} {}".format(i0,ans))
+
+# t = int(input())
+# for i0 in range(1,t+1):
+#     n,a,b = map(int,input().split())
+#     min_val = -1
+
+#     for r in range(1,n+1):
+#         c = 1
+#         while r*c<=n:
+#             value = a*abs(r-c)+b*(n-r*c)
+#             if min_val == -1:
+#                 min_val = a*abs(r-c)+b*(n-r*c)
+#             else:
+#                 min_val = min(min_val,value)
+#             c += 1
+
+#     print("#{} {}".format(i0,min_val))
