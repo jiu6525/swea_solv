@@ -1,0 +1,21 @@
+def ck(l):
+    r = [13]*4
+    r1 = [[],[],[],[]]
+    alpa = ['S','D','H','C']
+    for i in range(0,len(l),3):
+        a = alpa.index(l[i])
+        b = int("".join(l[i+1:i+3]))
+        if  b in r1[a]:
+            return "ERROR"
+        else:
+            r1[a].append(b)
+
+    for j in range(len(r)):
+        r[j] = r[j] - len(r1[j])
+
+    return " ".join(map(str,r))
+
+t = int(input())
+for i0 in range(1,t+1):
+    l = list(input())
+    print("#{} {}".format(i0,ck(l)))
