@@ -1,0 +1,27 @@
+def dfs(v,t_sum,k_sum):
+    global max_taste
+    if k_sum>L:
+        return
+    if max_taste<t_sum:
+        max_taste = t_sum
+    if v == N:
+        return
+    
+    taste, kcal = l[v]
+
+    dfs(v+1,t_sum+taste,k_sum+kcal)
+    dfs(v+1,t_sum,k_sum)
+    
+t = int(input())
+for i0 in range(1,t+1):
+    N,L = map(int,input().split())
+    l = []
+    for i in range(N):
+        l.append(list(map(int,input().split())))
+
+    max_taste = 0
+    dfs(0,0,0)
+
+    print("#{} {}".format(i0,max_taste))
+
+dfs를 사용하여 재료를 선정할경우와 아닌경우에 대한 모든 경우의수를 탐색하여 풀이했다
