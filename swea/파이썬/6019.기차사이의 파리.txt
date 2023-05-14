@@ -1,0 +1,5 @@
+t = int(input())
+for i0 in range(1,t+1):
+    d,a,b,f = map(int,input().split())
+    r = d/(a+b)
+    print("#{} {}".format(i0,format(r*f,".6f")))
