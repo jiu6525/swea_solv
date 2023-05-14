@@ -1,0 +1,8 @@
+t = int(input())
+for i0 in range(1,t+1):
+        l = list(input())
+        a = ''
+        for i in l:
+            a += 'b' if i == 'd' else ('d' if i == 'b' else ('p' if i == 'q' else 'q'))
+
+        print("#{} {}".format(i0,a[::-1]))
