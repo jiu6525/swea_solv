@@ -1,0 +1,3 @@
+for i0 in range(1,int(input())+1):
+    n = int(input())
+    print("#{} {} {} {}".format(i0, n*(n+1)//2, n**2, n*(n+1)))
