@@ -1,0 +1,8 @@
+t = int(input())
+for i0 in range(1,t+1):
+    n,m = map(int,input().split())
+    l1 = list(input().split())
+    l2 = list(input().split())
+    l = l1+l2
+    result = n+m-len(list(set(l)))
+    print(f'#{i0} {result}')
