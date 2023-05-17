@@ -1,0 +1,17 @@
+t = int(input())
+for i0 in range(1,t+1):
+    n = list(input())
+    l = []
+    n.sort()
+    for i in n:
+        if len(l):
+            a = l.pop(-1)
+            if i != a:
+                l.append(a)
+                l.append(i)
+        else:
+            l.append(i)
+
+    r = "".join(map(str,l)) if len(l) else "Good"
+
+    print("#{} {}".format(i0,r))
