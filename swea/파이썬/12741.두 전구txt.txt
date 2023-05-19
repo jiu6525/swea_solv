@@ -1,0 +1,15 @@
+t = int(input())
+result = []
+for i0 in range(1,t+1):
+    a,b,c,d = map(int,input().split())
+    r = 0
+    s = max(a,c)
+    e = min(b,d)
+    if s>e:
+        pass
+    else:
+        r += e-s
+    result.append(r)
+
+for i in range(len(result)):
+    print(f'#{i+1} {result[i]}')
