@@ -1,0 +1,6 @@
+t = int(input())
+for i0 in range(1,t+1):
+    a,b = 'o','x'
+    l = list(input())
+    r = "YES" if l.count(a)>=8 or (15-l.count(b)) > 7 else "NO"
+    print("#{} {}".format(i0,r))
