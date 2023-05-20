@@ -1,0 +1,4 @@
+t = int(input())
+for i0 in range(1,t+1):
+    a = 'Alice' if int(input())%2==0 else 'Bob'
+    print("#{} {}".format(i0,a))
