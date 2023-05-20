@@ -1,0 +1,12 @@
+t = int(input())
+for i0 in range(1,t+1):
+    m = [chr(i1) for i1 in range(97,123)]
+    n = list(input())
+    c = 0
+    for i in range(len(m)):
+        if n[i] == m[i]:
+            c += 1
+        else:
+            break
+
+    print("#{} {}".format(i0,c))
